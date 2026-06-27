@@ -51,9 +51,31 @@ DELETE
 - redis 
 - dynamodb
 # constraints in database 
-PRIMARY KEY – Uniquely identifies each record; cannot be NULL. eg:- student id
-FOREIGN KEY – Links two tables; maintains referential integrity. eg:- department_id in student table
-NOT NULL – Prevents NULL values in a column.eg:-name
-UNIQUE – Ensures all values in a column are different. eg:- email, phonenumber. eg:- email,phonenumber
-CHECK – Allows only values that satisfy a specified condition. eg:- salary > 0
-DEFAULT – Assigns a default value if no value is provided. eg:- timestamp:fun.now()
+- PRIMARY KEY – Uniquely identifies each record; cannot be NULL. eg:- student id
+- FOREIGN KEY – Links two tables; maintains referential integrity. eg:- department_id in student table
+- NOT NULL – Prevents NULL values in a column.eg:-name
+- UNIQUE – Ensures all values in a column are different. eg:- email, phonenumber. eg:- email,phonenumber
+- CHECK – Allows only values that satisfy a specified condition. eg:- salary > 0
+- DEFAULT – Assigns a default value if no value is provided. eg:- timestamp:fun.now()
+
+
+
+# Modules
+- sqlalchemy -- orm(object relational mapping)
+- fastapi -- webframework 
+- uvicorn -- server for running fastapi application --> `uvicorn app.main:app --reload`
+- psycopg2 -- postgresql driver 
+- pydantic -- data validation 
+- typing-extensions -- type hints 
+
+# Concepts:
+- ORM
+    - Object Relational Mapping --> to convert the python code to the sql code without writing the sql commands 
+- DEPENDS
+    - Dependcy injection --> to inject dependencies into route handlers 
+- sessionmaker 
+    - To create a session with the database
+- SessionLocal 
+    - To create a session with the database for a single request
+- declarative_base 
+    - To create a base class for all the models
